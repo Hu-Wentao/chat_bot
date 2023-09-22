@@ -187,7 +187,7 @@ def fragment_create_prompt():
         btn_text = "提交提示词" if not is_prompt_check() == "" else "修改提示词"
         st.form_submit_button(btn_text, on_click=submit_prompt)
     with st.expander("高级"):
-        st.session_state
+        # st.session_state
         if 'prompt_content' not in st.session_state:
             st.session_state.prompt_content = []
         for i, m in zip(range(len(st.session_state.prompt_content)), st.session_state.prompt_content):
